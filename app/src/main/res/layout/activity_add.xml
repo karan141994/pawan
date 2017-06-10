@@ -103,7 +103,7 @@
           <Button
               android:layout_gravity="center"
               android:id="@+id/addentry"
-              android:text="Add iT Bitch"
+              android:text="Add "
               android:layout_width="wrap_content"
               android:layout_height="wrap_content" />
 
