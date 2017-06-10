@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pawan.summer.add">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/name"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/nametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/city"
+            android:text="City Name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <EditText
+
+            android:id="@+id/citytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/address"
+            android:text="How to reach there?"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/addresstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/description"
+            android:text="Tell us about it"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/descriptiontext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/feature"
+            android:text="Something In detail"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/featuretext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/imagewill"
+            android:text="How Does It Look"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+        <Button
+            android:id="@+id/imagetoupload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="select image"
+            />
+
+          <Button
+              android:layout_gravity="center"
+              android:id="@+id/addentry"
+              android:text="Add iT Bitch"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+     </LinearLayout>>
+</ScrollView>

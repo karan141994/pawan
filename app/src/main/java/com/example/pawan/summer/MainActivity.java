@@ -1,11 +1,13 @@
 package com.example.pawan.summer;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -28,11 +30,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonRegister;
     private ProgressDialog progressDialog;
 
+    private TextView textviewlogin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(SharedPrefManager.getInstance(this).isLoggedin())
+        {
+
+
+            finish();
+            startActivity(new Intent(this , profile.class));
+            return;
+        }
+
+
 
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -40,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonRegister = (Button)findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
-
+        textviewlogin = (TextView) findViewById(R.id.textviewlogin);
+        textviewlogin.setOnClickListener(this);
 
     }
     private void registeruser() {
@@ -88,8 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
 
     }
 
@@ -99,6 +113,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view==buttonRegister)
         {
           registeruser();
+
+    }
+    if(view==textviewlogin)
+    {
+        startActivity(new Intent(this , Login.class));
 
     }
     }

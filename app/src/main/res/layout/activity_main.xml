@@ -64,6 +64,7 @@
 
     </LinearLayout>
 <TextView
+    android:id="@+id/textviewlogin"
     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
     android:layout_width="match_parent"
     android:textAlignment="center"
